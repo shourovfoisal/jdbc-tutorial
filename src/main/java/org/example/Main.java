@@ -37,12 +37,12 @@ public class Main {
 
             String query = "SELECT * FROM student";
 
-            ResultSet rs = st.executeQuery(query);
+            ResultSet rs = st.executeQuery(query);      // step 5 | execute query
             while(rs.next()) {
                 System.out.println(rs.getInt("id") + "  " + rs.getString("name"));
             }
-            st.close();
-            con.close();
+            st.close();     // step 6 | close the statement
+            con.close();    // step 7 | close the connection
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
